@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">The Calcualtion Game</string>
+    <string name="correct">Correct!</string>
+    <string name="_0_0">0/0</string>
+    <string name="_3">3</string>
+    <string name="_3a">3</string>
+    <string name="_3b">3</string>
+    <string name="_30s">30s</string>
+    <string name="_31_12">31+12</string>
+    <string name="go">GO!</string>
+    <string name="go1">GO!</string>
+    <string name="_31_121">31+12</string>
+    <string name="_3a1">3</string>
+    <string name="_0_01">0/0</string>
+    <string name="_3s">3</string>
+    <string name="_30sd">30s</string>
+    <string name="_3a2">3</string>
+    <string name="_3a4">3</string>
+</resources>

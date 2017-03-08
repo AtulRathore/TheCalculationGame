@@ -12,7 +12,7 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Button startButton;
-    ArrayList<Integer> answers;
+    ArrayList<Integer> answers = new ArrayList<Integer>();
     int locationOfRightAnswer;
 
     @Override
@@ -21,6 +21,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         startButton = (Button) findViewById(R.id.startGameButton);
         TextView sumTV = (TextView) findViewById(R.id.sumTV);
+
+        Button button3= (Button) findViewById(R.id.button3);
+        Button button4= (Button) findViewById(R.id.button4);
+        Button button5= (Button) findViewById(R.id.button5);
+        Button button6= (Button) findViewById(R.id.button6);
+
         Random rdm = new Random();
         int num1 = rdm.nextInt(26);
         int num2 = rdm.nextInt(26);
@@ -36,11 +42,15 @@ public class MainActivity extends AppCompatActivity {
                 while(wrongAnswer == num1+num2){
                     wrongAnswer= rdm.nextInt(41);
                 }
-
                 answers.add(wrongAnswer);
             }
-
         }
+
+        button3.setText(Integer.toString(answers.get(0)));
+        button4.setText(Integer.toString(answers.get(1)));
+        button5.setText(Integer.toString(answers.get(2)));
+        button6.setText(Integer.toString(answers.get(3)));
+
     }
 
     public void startGame(View view) {

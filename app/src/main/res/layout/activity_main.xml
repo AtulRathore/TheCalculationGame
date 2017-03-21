@@ -136,7 +136,6 @@
     </GridLayout>
 
     <TextView
-        android:text="@string/correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/resultTV"
@@ -145,5 +144,16 @@
         android:layout_alignLeft="@+id/startGameButton"
         android:layout_alignStart="@+id/startGameButton"
         android:layout_marginTop="26dp" />
+
+    <Button
+        android:text="Play Again"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/resultTV"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:id="@+id/playAgainBTN"
+        android:onClick="playAgain"
+        android:visibility="invisible" />
 
 </RelativeLayout>

@@ -10,150 +10,160 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.atul.thecalcualtiongame.MainActivity">
 
+    <RelativeLayout
+        android:id="@+id/startGameRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/pointsTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="#fab66a"
+            android:padding="10dp"
+            android:text="@string/_0_01"
+            android:textSize="30sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/sumTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="15dp"
+            android:text="@string/_31_121"
+            android:textColor="@android:color/background_dark"
+            android:textColorLink="?android:attr/editTextColor"
+            android:textSize="25sp"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/timerTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="#e5dc66"
+            android:padding="10dp"
+            android:text="@string/_30sd"
+            android:textSize="30sp" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sumTV"
+            android:layout_marginTop="20dp">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="selectAnswer"
+                android:tag="0"
+                android:text="@string/_3a1"
+                android:textSize="80sp"
+                tools:ignore="UnusedAttribute" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="0"
+                android:layout_rowWeight="1"
+                android:background="@android:color/holo_orange_light"
+                android:onClick="selectAnswer"
+                android:tag="1"
+                android:text="@string/_3s"
+                android:textSize="80sp"
+                tools:ignore="UnusedAttribute" />
+
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/darker_gray"
+                android:onClick="selectAnswer"
+                android:tag="2"
+                android:text="@string/_3a2"
+                android:textSize="80sp"
+                tools:ignore="UnusedAttribute" />
+
+            <Button
+                android:id="@+id/button6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill"
+                android:layout_row="1"
+                android:layout_rowWeight="1"
+                android:background="@android:color/holo_red_light"
+                android:onClick="selectAnswer"
+                android:tag="3"
+                android:text="@string/_3a4"
+                android:textSize="80sp"
+                tools:ignore="UnusedAttribute" />
+        </GridLayout>
+
+        <Button
+            android:id="@+id/playAgainBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/sumTV"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/sumTV"
+            android:layout_marginBottom="40dp"
+            android:onClick="reGame"
+            android:text="Play Again"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/gridLayout"
+            android:layout_alignStart="@+id/gridLayout"
+            android:layout_below="@+id/gridLayout"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="20dp"
+            android:textSize="25sp" />
+    </RelativeLayout>
+
     <Button
-        android:text="@string/go1"
+        android:id="@+id/startGameButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/startGameButton"
-        android:textSize="40sp"
-        android:padding="40dp"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="#64cc33"
         android:onClick="startGame"
-        android:visibility="invisible" />
-
-    <TextView
-        android:text="@string/_30sd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:id="@+id/timerTextView"
-        android:textSize="30sp"
-        android:padding="10dp"
-        android:background="#e5dc66" />
-
-    <TextView
-        android:text="@string/_0_01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:padding="10dp"
-        android:textSize="30sp"
-        android:background="#fab66a"
-        android:id="@+id/pointsTV"
-        tools:ignore="RelativeOverlap" />
-
-    <TextView
-        android:text="@string/_31_121"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/sumTV"
-        android:textSize="25sp"
-        android:padding="15dp"
-        android:textColorLink="?android:attr/editTextColor"
-        android:textColor="@android:color/background_dark"
-        tools:ignore="RelativeOverlap" />
-
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/sumTV"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="20dp">
-
-        <Button
-            android:text="@string/_3a1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="0"
-            android:id="@+id/button3"
-            android:textSize="80sp"
-            android:background="@color/colorPrimary"
-            android:onClick="selectAnswer"
-            tools:ignore="UnusedAttribute" />
-
-        <Button
-            android:text="@string/_3s"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="1"
-            android:id="@+id/button4"
-            android:textSize="80sp"
-            android:background="@android:color/holo_orange_light"
-            android:onClick="selectAnswer"
-            tools:ignore="UnusedAttribute" />
-
-
-        <Button
-            android:text="@string/_3a2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="2"
-            android:id="@+id/button5"
-            android:textSize="80sp"
-            android:background="@android:color/darker_gray"
-            android:onClick="selectAnswer"
-            tools:ignore="UnusedAttribute" />
-
-        <Button
-            android:text="@string/_3a4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:layout_gravity="fill"
-            android:tag="3"
-            android:id="@+id/button6"
-            android:textSize="80sp"
-            android:background="@android:color/holo_red_light"
-            android:onClick="selectAnswer"
-            tools:ignore="UnusedAttribute" />
-    </GridLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/resultTV"
+        android:padding="40dp"
+        android:text="@string/go1"
         android:textSize="40sp"
-        android:layout_below="@+id/startGameButton"
-        android:layout_alignLeft="@+id/startGameButton"
-        android:layout_alignStart="@+id/startGameButton"
-        android:layout_marginTop="26dp" />
-
-    <Button
-        android:text="Play Again"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/resultTV"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:id="@+id/playAgainBTN"
-        android:onClick="playAgain"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
 </RelativeLayout>

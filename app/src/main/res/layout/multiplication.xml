@@ -11,7 +11,7 @@
         android:id="@+id/startGameRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/pointsTV"
@@ -47,7 +47,7 @@
             android:layout_marginBottom="30dp"
             android:onClick="reGame"
             android:text="Play Again"
-            android:visibility="invisible" />
+            android:visibility="visible" />
 
         <GridLayout
             android:id="@+id/gridLayout"
@@ -156,6 +156,6 @@
         android:padding="40dp"
         android:text="@string/go"
         android:textSize="40sp"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
 </RelativeLayout>

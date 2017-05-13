@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     int gameScore = 0;
     int numberOfProblems = 0;
     RelativeLayout startGameRelativeLayout;
+    boolean isRunning = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,14 +52,27 @@ public class MainActivity extends AppCompatActivity {
         pointsTV.setText("0/0");
         resultTV.setText("");
         plaAgainBTN.setVisibility(View.INVISIBLE);
+
         generateQuestion();
         new CountDownTimer(30100, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
+                isRunning = true;
+                button3.setClickable(true);
+                button4.setClickable(true);
+                button5.setClickable(true);
+                button6.setClickable(true);
                 timerTextView.setText(String.valueOf(millisUntilFinished / 1000) + "s");
             }
             @Override
             public void onFinish() {
+                isRunning= false;
+                if(!isRunning){
+                    button3.setClickable(false);
+                    button4.setClickable(false);
+                    button5.setClickable(false);
+                    button6.setClickable(false);
+                }
                 plaAgainBTN.setVisibility(View.VISIBLE);
                 timerTextView.setText("0s");
                 resultTV.setText("Your Score:" +

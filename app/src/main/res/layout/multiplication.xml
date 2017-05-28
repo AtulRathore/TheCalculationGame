@@ -13,15 +13,60 @@
         android:id="@+id/startGameRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:visibility="visible">
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/timerTextView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/timerTextView"
+            android:gravity="center"
+            android:text="Timer" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/sumTV"
+            android:layout_centerHorizontal="true"
+            android:text="Problem" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/pointsTV"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/pointsTV"
+            android:gravity="center"
+            android:text="Score" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/pointsTV"
+            android:gravity="center"
+            android:text="Select the right answer !!"
+            android:textSize="30sp" />
 
         <TextView
             android:id="@+id/pointsTV"
             android:layout_width="120sp"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/timerTextView"
+            android:layout_alignBottom="@+id/timerTextView"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
             android:background="#fab66a"
             android:padding="10dp"
             android:text="@string/_0_0"
@@ -32,7 +77,7 @@
             android:id="@+id/sumTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/pointsTV"
             android:layout_centerHorizontal="true"
             android:padding="15dp"
             android:text="@string/_31_12"
@@ -44,10 +89,11 @@
             android:id="@+id/playAgainBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/sumTV"
             android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/sumTV"
-            android:layout_marginBottom="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
             android:background="@android:color/holo_green_dark"
             android:onClick="reGame"
             android:text="Play Again"
@@ -59,8 +105,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/sumTV"
-            android:layout_marginTop="20dp">
+            android:layout_below="@+id/textView3">
 
             <Button
                 android:id="@+id/button3"
@@ -131,6 +176,7 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
+            android:layout_marginTop="19dp"
             android:background="#e5dc66"
             android:padding="10dp"
             android:text="@string/_30s"
@@ -161,6 +207,6 @@
         android:padding="40dp"
         android:text="@string/go"
         android:textSize="40sp"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
 </RelativeLayout>

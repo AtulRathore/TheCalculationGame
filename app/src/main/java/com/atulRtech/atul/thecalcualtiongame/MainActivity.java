@@ -1,9 +1,7 @@
-package com.example.atul.thecalcualtiongame;
-
-import android.os.Bundle;
+package com.atulRtech.atul.thecalcualtiongame;
 import android.os.CountDownTimer;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
@@ -11,13 +9,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Random;
 
-/**
- * Created by Atul on 16-04-2017.
- */
-
-
-public class Multiplication extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity {
     Button startButton;
     Button button3;
     Button button4;
@@ -34,10 +26,11 @@ public class Multiplication extends AppCompatActivity {
     int numberOfProblems = 0;
     RelativeLayout startGameRelativeLayout;
     boolean isRunning = false;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.multiplication);
+        setContentView(R.layout.activity_main);
         startButton = (Button) findViewById(R.id.startGameButton);
         sumTV = (TextView) findViewById(R.id.sumTV);
         resultTV = (TextView) findViewById(R.id.resultTV);
@@ -59,6 +52,7 @@ public class Multiplication extends AppCompatActivity {
         pointsTV.setText("0/0");
         resultTV.setText("");
         plaAgainBTN.setVisibility(View.INVISIBLE);
+
         generateQuestion();
         new CountDownTimer(30100, 1000) {
             @Override
@@ -91,20 +85,20 @@ public class Multiplication extends AppCompatActivity {
     /*For Generating a new question*/
     public void generateQuestion() {
         Random rdm = new Random();
-        int num1 = rdm.nextInt(11);
-        int num2 = rdm.nextInt(11);
-        sumTV.setText(Integer.toString(num1) + " X "
+        int num1 = rdm.nextInt(26);
+        int num2 = rdm.nextInt(26);
+        sumTV.setText(Integer.toString(num1) + " + "
                 + Integer.toString(num2));
         locationOfRightAnswer = rdm.nextInt(4);
         answers.clear();
         int wrongAnswer;
         for (int i = 0; i < 4; i++) {
             if (i == locationOfRightAnswer) {
-                answers.add(num1 * num2);
+                answers.add(num1 + num2);
             } else {
-                wrongAnswer = rdm.nextInt(101);
-                while (wrongAnswer == num1 * num2) {
-                    wrongAnswer = rdm.nextInt(101);
+                wrongAnswer = rdm.nextInt(41);
+                while (wrongAnswer == num1 + num2) {
+                    wrongAnswer = rdm.nextInt(41);
                 }
                 answers.add(wrongAnswer);
             }

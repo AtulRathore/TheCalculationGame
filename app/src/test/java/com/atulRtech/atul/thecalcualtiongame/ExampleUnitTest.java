@@ -1,4 +1,4 @@
-package com.example.atul.thecalcualtiongame;
+package com.atulRtech.atul.thecalcualtiongame;
 
 import org.junit.Test;
 
